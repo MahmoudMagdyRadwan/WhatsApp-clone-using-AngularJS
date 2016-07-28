@@ -1,22 +1,27 @@
+<!doctype html>
+
 <html lang="en" ng-app="myApp">
 
-<head>
+		<head>
 
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WhatsApp-Clone</title>
-  	<link rel="stylesheet" href="styles/style.css"/>
+			<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>WhatsApp-Clone</title>
+		  	<link rel="stylesheet" href="styles/style.css"/>
 
-</head>
+		</head>
 
-<body>
-    
-	<div ng-view></div>
+		<body ng-app="myApp">
+		    
+			<div ng-view></div>
 
-	<script src="scripts/lib/angular.js"></script>
-	<script src="scripts/lib/angular-route.js"></script>
-	<script src="scripts/lib/angular-cookies.js">></script>
 
-</body>
+			<script src="scripts/lib/angular.js"></script>
+			<script src="scripts/lib/angular-route.js"></script>
+			<script src="scripts/lib/angular-cookies.js">></script>
+			<script src="scripts/app.js"></script>
+			<script src="scripts/routes.js"></script>
+
+		</body>
 </html>
