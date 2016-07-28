@@ -1,7 +1,7 @@
-angular
-	.module('myApp')
-	.config(configurator)
-function configurator($routeProvider,$httpProvider, $locationProvider) {
+
+var app = angular.module('myApp', ['ngRoute','ngCookies']);
+
+app.config(function($routeProvider){
 
 	$routeProvider
         .when('/', {
@@ -23,7 +23,4 @@ function configurator($routeProvider,$httpProvider, $locationProvider) {
         		redirectTo: 'views/home.html'
         });
 
-        $locationProvider.html5Mode(true);
-
-}	
-
+});
