@@ -1,3 +1,33 @@
-<div>      
-        <h2>Welcome</h2>
+<div class="main">
+  <div ng-controller="profileController">
+    <div>      
+		        <h2>Welcome to WhatsApp</h2>
+		        <h3>explore your chat groups</h3>
+	</div>
+ <div class="panel-heading">
+    <ul class="nav nav-tabs">
+            <li class="active">
+            	<a href="#">
+            	<h2>Groups</h2>
+            </a>
+        </li>
+    </ul>
+ </div>
+ 
+ <div>
+    
+    	<ul class="grouplists">
+    		<li class="groups" ng-repeat="item in groupname">
+
+              <a href="#/groups/{{groupname.indexOf(item)}}">
+                <h3> {{item.name}}</h3>
+              </a>
+    		</li>
+    	</ul>
+        
+  </div>
+                  
+ </div>
 </div>
+
+

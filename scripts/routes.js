@@ -14,7 +14,7 @@ app.config(function($routeProvider){
              controller  : 'profileController'
                 
         })
-        .when('/group/:groupid', {
+        .when('/groups/:groupId', {
                 templateUrl: 'views/messages.html',
                 controller: 'viewmessagesController'
 
