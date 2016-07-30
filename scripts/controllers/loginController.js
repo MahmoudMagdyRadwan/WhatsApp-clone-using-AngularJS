@@ -1,5 +1,5 @@
 angular
-    .module('myApp')
+    .module('whattsApp')
     .controller('loginController', loginController);
 
 loginController.$inject = ['$scope','$location','$http', '$cookies','$rootScope'];
@@ -7,8 +7,8 @@ loginController.$inject = ['$scope','$location','$http', '$cookies','$rootScope'
 function loginController($scope, $location, $http, $cookies, $rootScope){
     $scope.GO = GO;
     function GO() {
-        $location.path('/profile'); 
-        $rootScope.username = "Mahmoud"; 
+        $scope.isAuthenticated =true;
+        $location.path('/profile');
      
      /**   var obj = {
             'phoneNumber': $scope.inputData.phoneNumber,
@@ -24,7 +24,7 @@ function loginController($scope, $location, $http, $cookies, $rootScope){
             .success(function(data, status, headers, config) {
                 authService.setCookieData(data);
                 $location.path('/profile');
-                $rootScope.username = data.username;
+                $scope.isAuthenticated =true;
     }**/
 }
 }

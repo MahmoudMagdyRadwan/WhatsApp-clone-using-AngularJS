@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp', ['ngRoute','ngCookies','ngMessages']);
+var app = angular.module('whattsApp', ['ngRoute','ngCookies','ngMessages']);
 
 app.config(function($routeProvider){
 

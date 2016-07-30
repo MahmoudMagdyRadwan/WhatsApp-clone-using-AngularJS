@@ -1,5 +1,5 @@
 angular
-    .module('myApp')
+    .module('whattsApp')
     .controller('profileController', profileController);
 
 profileController.$inject = ['$scope','$http'];

@@ -1,5 +1,5 @@
 angular
-    .module('myApp')
+    .module('whattsApp')
     .controller('chatController', chatController);
 
 chatController.$inject = ['$scope','$http', '$routeParams'];
