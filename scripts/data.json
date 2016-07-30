@@ -1,17 +1,37 @@
 [
-
 	{
-	  "name":"college"
+	  "name":"college",
+	  
+	  	"chat":{
+	  		"Mahmoud":"Hi how're you?",
+		  	"Ahmed":"Mahmouddddd where have you been man!",
+		  	"Alaa":"now i can see all the group is gathered again ,welcome back people",
+		  	"Mahmoud":"i'm here i was just buys finishing some business :) "
+          }
+    },
+	{
+	  "name":"work",
+	  "chat":{"Mariam":"Hi,how're you?",
+	  "Aesha":"Mahmouddddd,where have you been man!",
+	  "lilly":"now i can see all the group is gathered again ,welcome back people",
+	  "nadia":"i'm here ,i was just buys finishing some business :) "
+	}
 	},
 	{
-	  "name":"work"
+	  "name":"family",
+	  "chat":{"Mahmoud":"Hi,how're you?",
+	  "Ahmed":"Mahmouddddd,where have you been man!",
+	  "Alaa":"now i can see all the group is gathered again ,welcome back people",
+	  "Mahmoud":"i'm here ,i was just buys finishing some business :) "
+	}
 	},
 	{
-	  "name":"family"
-	},
-	{
-	  "name":"friends"
+	  "name":"friends",
+	 "chat":{ "Mahmoud":"Hi,how're you?",
+	  "Ahmed":"Mahmouddddd,where have you been man!",
+	  "Alaa":"now i can see all the group is gathered again ,welcome back people",
+	  "Mahmoud":"i'm here ,i was just buys finishing some business :) "
 	}
 
-
+}
 ]

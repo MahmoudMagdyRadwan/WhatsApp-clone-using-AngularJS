@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp', ['ngRoute','ngCookies']);
+var app = angular.module('myApp', ['ngRoute','ngCookies','ngMessages']);
 
 app.config(function($routeProvider){
 
@@ -15,8 +15,8 @@ app.config(function($routeProvider){
                 
         })
         .when('/groups/:groupId', {
-                templateUrl: 'views/messages.html',
-                controller: 'viewmessagesController'
+                templateUrl: 'views/groups.html',
+                controller: 'chatController'
 
         })
         .otherwise({
