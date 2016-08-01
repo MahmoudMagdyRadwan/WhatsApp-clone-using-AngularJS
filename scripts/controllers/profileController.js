@@ -10,6 +10,17 @@ $http.get('scripts/data.json').success(function(data){
     $scope.groupname=data;
 });
 
+/**$http({
+            method: 'GET',
+            url: 'scripts/data.json' + groupId,
+            crossDomain: true,
+            xhrFields: { withCredentials: true },
+        })
+        .success(function(data) {
+                $scope.groupname = data;
+            });
+    }**/
+
 
 
     

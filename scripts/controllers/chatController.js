@@ -6,6 +6,16 @@ chatController.$inject = ['$scope','$http', '$routeParams'];
 
 function chatController($scope, $http, $routeParams){
 
+
+     $scope.messages = [];
+     $scope.new_reply='';
+
+    $http.get('scripts/data.json').success(function(data){
+    $scope.groupname = data;
+    $scope.whichGroup=$routeParams.groupId;
+
+  });
+
 	/**function getchatdetails($routeParams.groupId){
 		return $http({
             method: 'GET',
@@ -16,13 +26,9 @@ function chatController($scope, $http, $routeParams){
                 $scope.details = data;
             });
     }**/
-    $scope.messages = [];
-     $scope.new_reply='';
+
    
-$http.get('scripts/data.json').success(function(data){
-    $scope.groupname = data;
-    $scope.whichGroup=$routeParams.groupId;
-});
+
 
  $scope.submit = function () {
 
@@ -30,10 +36,6 @@ $http.get('scripts/data.json').success(function(data){
        $scope.messages.push(this.new_reply);
        $scope.new_reply='';
             }
- 	/**$scope.sent=true;
- 	var obj = $scope.new_reply;
- 	 	$scope.messg=obj;
-**/
     }
 
 
@@ -47,7 +49,7 @@ $http.get('scripts/data.json').success(function(data){
 
         $http({
                 method: 'POST',
-                url: 'scripts/data.json',
+                url: '',
                 data: JSON.stringify(reply),
                 crossDomain: true,
                 xhrFields: { withCredentials: true },

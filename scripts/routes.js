@@ -15,7 +15,7 @@ app.config(function($routeProvider){
                 
         })
         .when('/groups/:groupId', {
-                templateUrl: 'views/groups.html',
+                templateUrl: 'views/chat.html',
                 controller: 'chatController'
 
         })

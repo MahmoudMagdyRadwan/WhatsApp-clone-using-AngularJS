@@ -1,28 +1,33 @@
 <div class="main">
-  <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
-          <ul class="nav navbar-nav">
-            <a href="/" class="navbar-brand"><i class="ion-images"></i> WhatsApp</a>
-            <li><a href="#/">Home</a></li>
-            <li><a ng-click="logout()" href="">Logout</a></li>
-          </ul>
+
+     <div class="navbar navbar-default navbar-static-top">
+
+        <div class="container" ng-controller="LogoutController">
+            <ul class="nav navbar-nav">
+                <a href="/" class="navbar-brand"><i class="ion-images"></i> WhatsApp</a>
+                <li><a href="#/profile">Home</a></li>
+                <li><a ng-click="logout()" href="">Logout</a></li>
+            </ul>
         </div>
-      </div>
-  <div ng-controller="profileController">
-     <div class="panel-heading">
+
+     </div> 
+
+     <div ng-controller="profileController">
+
+       <div class="panel-heading">
         <h2>Groups</h2>
-      </div>
-  <div ng-repeat="item in groupname" class="col-lg-2 col-sm-3 col-xs-4">
-    <!-- <a href="#/groups/{{item.id}}">-->
-   <a href="#/groups/{{groupname.indexOf(item)}}">
+       </div>
+
+       <div ng-repeat="item in groupname" class="col-lg-2 col-sm-3 col-xs-4">
+         
+         <!-- <a href="#/groups/{{item.id}}">-->
+         
+         <a href="#/groups/{{groupname.indexOf(item)}}">
           <h3> {{item.name}}</h3>
-        </a>
-    </li>
-  </ul>
-        
-  </div>
+         </a>
+        </div>
                   
- </div>
+      </div>
 </div>
 
 

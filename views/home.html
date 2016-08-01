@@ -1,14 +1,13 @@
-
 <div class="container">
-  <div ng-if="!isAuthenticated">
-          <div class="panel-body">
+  <div class="center-form panel">
+          <div class="panel-body" style="width:500px; height:500px; margin:0 auto; ">
       <h2><i class="ion-images"></i> WhatsApp</h2>
       <p> 
           <h4> <i class="ion-log-in"></i> Log in with your Phone Number.</h4>
       </p>
       <br>
          <form>
-          <div class="input-group input-group-lg" >
+          <div class="input-group input-group-lg" required >
            <input class="form-control input-focus" ng-model="inputData.phoneNumber" placeholder="Enter your phone number!" required>
           <br>
 
