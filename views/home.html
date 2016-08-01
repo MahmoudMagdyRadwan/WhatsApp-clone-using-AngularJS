@@ -1,5 +1,6 @@
+
 <div class="container">
-  <div ng-if="!isAuthenticated()">
+  <div ng-if="!isAuthenticated">
           <div class="panel-body">
       <h2><i class="ion-images"></i> WhatsApp</h2>
       <p> 
@@ -7,45 +8,17 @@
       </p>
       <br>
          <form>
-                <div class="input-group input-group-lg" >
-                  <input class="form-control input-focus" ng-model="inputData.phoneNumber" placeholder="Enter your phone number!" required  >
-                  <br>
-                  
-                  <button type="submit" class="btn sub-button" ng-click="GO()">GO</button>
+          <div class="input-group input-group-lg" >
+           <input class="form-control input-focus" ng-model="inputData.phoneNumber" placeholder="Enter your phone number!" required>
+          <br>
+
+             <button type="submit" class="btn sub-button" ng-click="GO()">GO</button>
                  
-                </div>
+          </div>
          </form>
       </div>
   </div>
 </div>
   
 
-<!--
-  <div ng-if="isAuthenticated()">
-    <div class="row">
-      <div ng-repeat="photo in photos" class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#/photo/{{photo.id}}">
-          <img ng-src="{{photo.images.standard_resolution.url}}" class="thumbnail img-responsive">
-        </a>
-      </div>
-    </div>
-  </div>
--->
-<!--
 
-<div class="container-fluid">
-  <div class="row" ng-controller="loginController">
-          <div class="col-md-12 col-sm-12">
-              <form>
-                <div class="input-group input-group-lg">
-                  <input class="form-control input-focus" ng-model="inputData.phoneNumber" placeholder="Enter your phone number!" required/ >
-                  <button type="submit" class="btn sub-button" ng-click="GO()">GO</button>
-                 
-                </div>
-              </form>
-            
-          </div>
-  </div>
-
-</div>
--->

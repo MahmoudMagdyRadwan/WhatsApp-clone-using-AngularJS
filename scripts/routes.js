@@ -23,4 +23,6 @@ app.config(function($routeProvider){
         		redirectTo: 'views/home.html'
         });
 
-});
+})
+
+;

@@ -2,12 +2,11 @@ angular
     .module('whattsApp')
     .controller('loginController', loginController);
 
-loginController.$inject = ['$scope','$location','$http', '$cookies','$rootScope'];
+loginController.$inject = ['$scope','$location','$http', '$cookies','$rootScope','authService'];
 
-function loginController($scope, $location, $http, $cookies, $rootScope){
-    $scope.GO = GO;
-    function GO() {
-        $scope.isAuthenticated =true;
+function loginController($scope, $location, $http, $cookies, $rootScope,authService){
+    $scope.GO =function(){
+        $scope.isAuthenticated=true;
         $location.path('/profile');
      
      /**   var obj = {
@@ -22,6 +21,7 @@ function loginController($scope, $location, $http, $cookies, $rootScope){
 
             })
             .success(function(data, status, headers, config) {
+                
                 authService.setCookieData(data);
                 $location.path('/profile');
                 $scope.isAuthenticated =true;
