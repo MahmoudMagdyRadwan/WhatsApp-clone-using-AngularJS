@@ -9,87 +9,51 @@
 </div>
 
 
-<div ng-controller="chatController">
+<div  ng-controller="chatController">
+	<h1 class="media-heading">{{details[whichGroup].name}}</h1>
   <!--
-  <h1>{{details.groupname}}</h1>
--->
-	<h1>{{groupname[whichGroup].name}}</h1>
+  <h1 class="media-heading">{{details.groupname}}</h1>
+  -->
 	<br>
 
 	<div>
 
-    	<ul class="grouplists">
-        <!--
-        <li class="groups" ng-repeat=item in details">
-                <h3> {{item.key}} :{{item.value}}</h3>
-        </li>
-      -->
-    		<li class="groups" ng-repeat="(key, value) in groupname[whichGroup].chat">
+ 	  <ul class="grouplists">
+    		<li class="groups" ng-repeat="(key, value) in details[whichGroup].chat">
                 <h3> {{key}} :{{value}}</h3>
     		</li>
-
-    	</ul>
         
+        <!--
+        <li class="groups" ng-repeat="message  in details">
+                <h3> {{message .key}} :{{message .value}}</h3>
+                //<b>{{message.sender}}</b>: {{message.text}} 
+        </li>
+      -->
+      
+    </ul>
+
   </div>
-  
+
   <div>
      <ul>
-        <li ng-repeat="item in messages">
-            <h3>You:{{item}}</h3 >
-
+        <li ng-repeat="message  in messages">
+            <h3>You:{{message }}</h3 >
         </li>
-
       </ul>
   </div>
-  <!--
-  <div class="row">
-	    <div class="col-md-5 col-sm-5" style="padding-left: 40px;">
-	      <textarea class="form-control" ng-model="new_reply" placeholder="Reply here..." rows="5">
-	      </textarea>
-	    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2 col-sm-2" style="padding-left:40px; margin:15px 0px;">
-      <button type="submit" class="btn sub-button" ng-click="Addreply()">Go</button>
-    </div>
-  </div>
--->
-<form ng-submit="submit()">
-  <input type="text" ng-model="new_reply" name="text" />
-  <button type="submit" class="btn ">Send</button>
-</form>
+
+  <form ng-submit="sendMessage()" style="padding:5px; bottom: 0;" >
+
+    <input type="text" style=" border:1px;padding:10px;width:85%; margin-right: .5%; margin-left:.5%;" ng-model="new_reply" name="text" placeholder="Type your message here" />
+
+    <button type="submit" style="width:10%; border:1px; padding:1p0x;" class="btn "class="input-group-addon">
+
+      <h5><span class="glyphicon glyphicon-comment" ></span> SEND</h5>
+
+    </button>
+
+  </form>
 
 
-
-
-<!--    <div class="row">
-	    <div class="col-md-5 col-sm-5" style="padding-left: 40px;">
-	      <textarea class="form-control" ng-model="new_reply" placeholder="Reply here..." rows="5">
-	      </textarea>
-	    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2 col-sm-2" style="padding-left:40px; margin:15px 0px;">
-      <button type="submit" class="btn sub-button" ng-click="Addreply()">reply</button>
-    </div>
-  </div>
-<div class="row" ng-repeat="item in details.replys">
-	<div class="col-md-2 col-sm-2" style="margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid #ccc; width:12%;">
-          <div class="row">
-            <div class="col-md-12 col-sm-12">
-              <span title="Author" class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:11px;"></span>
-              <span title="Author" class="side-info"> {{item.username}}</span>
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6" style="padding-left:0px;">
-          <h5>
-            {{item.description}}
-          </h5>
-        </div>
-    </div>
-
-
--->
 </div>
+
