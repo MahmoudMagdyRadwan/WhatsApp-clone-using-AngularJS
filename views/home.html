@@ -1,15 +1,40 @@
+<div class="navbar navbar-default navbar-static-top">
+        <div class="container" ng-controller="LogoutController">
+            <h2><i class="ion-images"></i> WhatsApp</h2>
+        </div>
+</div>
+
 <div class="container">
   <div class="center-form panel">
-          <div class="panel-body" style="width:500px; height:500px; margin:0 auto; ">
-      <h2><i class="ion-images"></i> WhatsApp</h2>
+          <div class="panel-body" style="width:500px; height:300px; margin:0 auto; ">
       <p> 
           <h4> <i class="ion-log-in"></i> Log in with your Phone Number.</h4>
       </p>
       <br>
          <form>
           <div class="input-group input-group-lg" required >
-           <input class="form-control input-focus" ng-model="inputData.phoneNumber" placeholder="Enter your phone number!" required>
+           <input class="form-control input-focus" 
+           ng-model="inputData.phoneNumber" 
+           placeholder="Enter your phone number!"
+           style="width:300px;"
+            required>
           <br>
+          <br>
+
+           <p>
+            <br>
+                        <input class="form-control input-focus"
+                               type="password"
+                               name="password"
+                               id="password"
+                               placeholder="Password"
+                               ng-model="inputData.password"
+                               required>
+                    </p>
+            
+            <br>
+            <br>
+            
 
              <button type="submit" class="btn sub-button" ng-click="GO()">GO</button>
                  
