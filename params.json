@@ -1,0 +1,6 @@
+{
+  "name": "Whatsapp-clone-using-angularjs",
+  "tagline": "Front-end implementation for whatsapp using Angularjs framework",
+  "body": "# WhatsApp-clone-using-AngularJS\r\nhere a basic simple clone of whatsapp or messaging system.\r\n1-)the user can login with the phoneNumber \r\n2-)after that the server validate the number and the user is authenticated\r\n3-)the user is forwarded to user profile where he/she can view their enrolled groups\r\n4-)on choosing a specific group, the user is forwarded to the chatroom where he can see past messages or send new text message.\r\n\r\nNote:\r\nthis implementation is standalone without a server backend to send or receive data so i used a json file having some dummy data to make the requests.\r\n\r\nfor real implementation interacting with the server use the commented lines of code instead of used ones.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
